@@ -1,0 +1,54 @@
+.ac {
+    margin-top: 20px;
+    margin-left: 200px;
+    height: 200px;
+    width: 700px;
+    border-radius: 8px;
+    border: solid 2px black;
+  }
+  
+  .secondContainer {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin-right: 20px;
+    margin-left: 70px;
+  }
+  
+  #name {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #opening {
+    border-radius: 3px;
+    height: 30px;
+    width: 500px;
+    border: solid 1px black;
+    margin-left: 90px;
+  }
+  
+  .remote {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    height: 450px;
+    width: 220px;
+    border-radius: 5px;
+    border: solid 1px black;
+  }
+  
+  #setName {
+    width: 180px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 17px;
+  }
+  
+  #on {
+    margin-top: 20px;
+    margin-left: 150px;
+  }
+  

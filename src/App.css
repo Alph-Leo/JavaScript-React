@@ -8,7 +8,94 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .main_container{
+    position: absolute;
+  }
+  .innerContainer{
+    background-color: rgb(223, 220, 216);
+    border: 1px solid gray;
+    width: 600px;
+    height: 200px;
+    margin-left: 200px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 50px;
+  }
+  .inner_cont1 h2{
+    padding-bottom: 20px;
+    
+  }
+  .inner_cont{
+    border: 1px solid black;
+    height: 70px;
+    width: 200px;
+    margin-left: 200px;
+    border-radius: 50px;
+    position: absolute;
+  }
+  .innerCont2 p{
+    color: blue;
+    font-size: 20px;
+    padding-left: 400px;
+    position: relative;
+    
+  }
+  .innerCont3 button{
+    background-color: orange;
+    border-color: orange;
+    color: rgb(250, 248, 243);
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 150px;
+    position: relative;
+  
+  }
+  .firstButton button{
+    margin-top: 50px;
+    margin-left: -100px;
+    position: absolute;
+  }
+  .secondButton button{
+    margin-top: 50px;
+    margin-left: 100px;
+    position: relative;
+    
+  }
+  .emptydiv{
+    background-color: rgb(238, 238, 227);
+    height: 500px;
+    width: 300px;
+    border: 1px solid gray;
+    border-color:  rgb(223, 220, 216);
+    margin-left: 300px;
+    margin-top: 300px;
+    position: absolute;
+    position: relative;
+    border-radius: 20px;
+  }
+  .innerEmptydiv2{
+    border: 1px solid gray;
+    width: 150px;
+    height: 100px;
+    background-color:  rgb(223, 220, 216);
+    position: relative;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  .innerEmptydiv{
+    height: 450px;
+    width: 250px;
+    position: absolute;
+    position: relative;
+    border: 2px solid rgb(222, 221, 224);
+    margin-left: 25px;
+    margin-top: 30px;
+    border-radius: 20px;
+
+  }
+  /* .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -25,7 +112,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #61dafb; */
 }
 
 @keyframes App-logo-spin {
