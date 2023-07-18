@@ -1,0 +1,22 @@
+input[type="text"] {
+    font-size: 35px;
+    color: aquamarine;
+    /* border: 1px solid blue; */
+}
+.container input {
+    height: 50px;
+    margin-left: 500px;
+    display: block;
+    margin-top: 50px;
+}
+p {
+    border: 1px solid green;
+    margin-left: 500px;
+    width: 450px;
+    margin-top: 100px;
+    height: 50px;
+    font-size: 25px;
+    color: pink;
+    background-color: navy;
+
+}

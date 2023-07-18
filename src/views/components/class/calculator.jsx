@@ -1,5 +1,5 @@
 import React from 'react';
-import './Calculator.css'
+import './calculator.css'
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -11,17 +11,18 @@ class Calculator extends React.Component {
   }
 
   
-  handleDigitsClick = (number) => {
+  pressNumberButton = (number) => {
     const { displayValue } = this.state;
     const newDisplayValue = displayValue === 0 ? number : displayValue + number;
     this.setState({ displayValue: newDisplayValue });
+
   };
 
-  handleClearClick = () => {
+  clearButton = () => {
     this.setState({ displayValue: 0 });
   };
 
-  handleEqualClick = () => {
+  equalsButton = () => {
     try {
       const result = eval(this.state.displayValue);
       this.setState({ displayValue: result.toString() });
@@ -35,47 +36,54 @@ class Calculator extends React.Component {
 
     return (
         <div id='outer-container'>
-             <div id='classNameOne'>
-        <input type="text" value={displayValue} readOnly />
-        <div className="buttons">
-
+             <div className="classNameOne">
+              <p><input type="text" value={displayValue} readOnly /></p>
+              <p>{this.pressNumberButton}</p>
+             </div>
+        <div className="inner-container">
+              
             <div id='first-holder'>
-                <button onClick={this.handleClearClick}>C</button>
-                <button onClick={()=>this.handleDigitsClick('+/-')}>+/-</button>
-                <button onClick={() => this.handleDigitsClick('%')}>%</button>
-                <button onClick={() => this.handleDigitsClick('/')}>/</button>
+                <button onClick={this.clearButton}>C</button>
+                <button onClick={()=>this.pressNumberButton('+/-')}>+/-</button>
+                <button onClick={() => this.pressNumberButton('%')}>%</button>
+                <button onClick={() => this.pressNumberButton('/')}>/</button>
             </div>
             <div id='second-holder'>
-                <button onClick={() => this.handleDigitsClick('7')}>7</button>
-                <button onClick={() => this.handleDigitsClick('8')}>8</button>
-                <button onClick={() => this.handleDigitsClick('9')}>9</button>
-                <button onClick={() => this.handleDigitsClick('*')}>*</button>
+                <button onClick={() => this.pressNumberButton('7')}>7</button>
+                <button onClick={() => this.pressNumberButton('8')}>8</button>
+                <button onClick={() => this.pressNumberButton('9')}>9</button>
+                <button onClick={() => this.pressNumberButton('*')}>X</button>
             </div>
 
             <div id='third-holder'>
-                <button onClick={() => this.handleDigitsClick('4')}>4</button>
-                <button onClick={() => this.handleDigitsClick('5')}>5</button>
-                <button onClick={() => this.handleDigitsClick('6')}>6</button>
-                <button onClick={() => this.handleDigitsClick('-')}>-</button>
+                <button onClick={() => this.pressNumberButton('4')}>4</button>
+                <button onClick={() => this.pressNumberButton('5')}>5</button>
+                <button onClick={() => this.pressNumberButton('6')}>6</button>
+                <button onClick={() => this.pressNumberButton('-')}>-</button>
             </div>
 
             <div id='forth-holder'>
-                <button onClick={() => this.handleDigitsClick('1')}>1</button>
-                <button onClick={() => this.handleDigitsClick('2')}>2</button>
-                <button onClick={() => this.handleDigitsClick('3')}>3</button>
-                <button onClick={() => this.handleDigitsClick('+')}>+</button>
+                <button onClick={() => this.pressNumberButton('1')}>1</button>
+                <button onClick={() => this.pressNumberButton('2')}>2</button>
+                <button onClick={() => this.pressNumberButton('3')}>3</button>
+                <button onClick={() => this.pressNumberButton('+')}>+</button>
             </div>
 
-
             <div id='fifth-holder'>
-                <button onClick={this.handleEqualClick}>=</button>
-                <button onClick={() => this.handleDigitsClick('.')}>.</button>
-                <button onClick={() => this.handleDigitsClick('0')}>0</button>
-
+              <div id='zeroButton'>
+                <button onClick={() => this.pressNumberButton('0')}>0</button>
+              </div>
+              <div id="equalButton">
+                <button onClick={() => this.pressNumberButton('.')}>.</button>
+                <span><button onClick={this.equalsButton}>=</button></span>
+              </div>
             </div> 
+
+        </div>  
+
         </div>
-      </div>
-        </div>
+    
+      
      
     );
   }
